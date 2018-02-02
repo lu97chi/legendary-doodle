@@ -1,13 +1,18 @@
 const EXPRESS = require('express');
 const APP = EXPRESS();
+const ROUTER = EXPRESS.Router();
+const bodyParser = require('body-parser'); 
 const MONGOOSE = require('mongoose');
-MONGOOSE.connect('mongodb://lu97is:eagle1997@ds117148.mlab.com:17148/nodetest1997', function (err) {
+const API = require('./routes/api')(ROUTER);
+MONGOOSE.connect('mongodb://lu97is:eagle1997@ds117148.mlab.com:17148/nodetest1997', (err) => {
     if (err) {
         console.log('error')
     } else {
         console.log('conectado')
     }
 })
+APP.use(bodyParser.urlencoded({extended:false}))
+APP.use(bodyParser.json());
 APP.get('/', (req, res) => {
     res.send('hola mundo');
 });
