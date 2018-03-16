@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <script
+    src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+    crossorigin="anonymous"></script>
+    <title>Documentacion</title>
+</head>
+<body>
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo">Documentacion</a>
+        </div>
+    </nav>
+    <!-- <span>url metodo urlparams required dataparams successrepose errorresponse sample </span> -->
+    <div class="row">
+            <ul class="collapsible" data-collapsible="accordion">
+                <li>
+                      <div class="collapsible-header">
+                          <div class="col s1">
+                                <button class="btn waves-effect waves-light">GET</button>
+                          </div>
+                          <div class="col s3" style="margin-left:20px;margin-top:10px;">
+                              <span class="flow-text">URL: /getProfile</span>
+                          </div>
+                          <div class="col s6">
+                              <h5>Obtener informacion del usuario</h5>
+                          </div>
+                        </div>
+                      <div class="collapsible-body">
+                          <table class="striped">
+                              <tr>
+                                  <th>Parametros requeridos</th>
+                                  <th>Parametros de datos</th>
+                                  <th>Respuesta Correcta</th>
+                                  <th>Respuesta Incorrecta</th>
+                                  <th>Ejemplo</th>
+                              </tr>
+                              <tr>
+                                  <td>Token de Login(headers)</td>
+                                  <td>None</td>
+                                  <td>
+                                      Exito: true <br>
+                                      Respuesta: Email,Name,Password
+                                  </td>
+                                  <td>
+                                      Exito: false <br>
+                                      Respuesta: Token Requerido || Token invalido
+                                  </td>
+                                  <td>
+                                        http://localhost:8080/api/getProfile
+                                  </td>
+                              </tr>
+                          </table>
+                        </div>
+                </li>
+                <li>
+                    <div class="collapsible-header">
+                        <div class="col s1">
+                            <button class="btn orange lighten-1 waves-effect waves-orange">POST</button>
+                        </div>
+                        <div class="col s3" style="margin-left:20px;margin-top:10px;">
+                            <span class="flow-text">URL: /register</span>
+                        </div>
+                        <div class="col s6">
+                            <h5>Registrar Usuario nuevo</h5>
+                        </div>
+                    </div>
+                    <div class="collapsible-body">
+                        <table class="striped">
+                            <tr>
+                                <th>Parametros requeridos</th>
+                                <th>Parametros de datos</th>
+                                <th>Respuesta Correcta</th>
+                                <th>Respuesta Incorrecta</th>
+                                <th>Ejemplo</th>
+                            </tr>
+                            <tr>
+                                <td>None</td>
+                                <td>email, name, password</td>
+                                <td>
+                                    Exito: true <br>
+                                    Respuesta: Usuario Registrado
+                                </td>
+                                <td>
+                                    Exito: false <br>
+                                    Respuesta: Favor proporcionar email || Email ya registrado
+                                </td>
+                                <td>
+                                    http://localhost:8080/api/register
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </li>
+                <li>
+                        <div class="collapsible-header">
+                            <div class="col s1">
+                                <button class="btn orange lighten-1 waves-effect waves-orange">POST</button>
+                            </div>
+                            <div class="col s3" style="margin-left:20px;margin-top:10px;">
+                                <span class="flow-text">URL: /login</span>
+                            </div>
+                            <div class="col s6">
+                                <h5>Acceder Cuenta</h5>
+                            </div>
+                        </div>
+                        <div class="collapsible-body">
+                            <table class="striped">
+                                <tr>
+                                    <th>Parametros requeridos</th>
+                                    <th>Parametros de datos</th>
+                                    <th>Respuesta Correcta</th>
+                                    <th>Respuesta Incorrecta</th>
+                                    <th>Ejemplo</th>
+                                </tr>
+                                <tr>
+                                    <td>email, password</td>
+                                    <td>none</td>
+                                    <td>
+                                        Exito: true <br>
+                                        Respuesta: Usuario Autenticado
+                                    </td>
+                                    <td>
+                                        Exito: false <br>
+                                        Respuesta: Ingresar email, Ingresar Contraseña, Usuario no encontrado, Contraseña incorre
+                                    </td>
+                                    <td>
+                                        http://localhost:8080/api/login
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </li>
+                    <li>
+                            <div class="collapsible-header">
+                                <div class="col s1">
+                                        <button class="btn red lighten-1 waves-effect waves-red">PUT</button>
+                                    </div>
+                                <div class="col s3" style="margin-left:20px;margin-top:10px;">
+                                    <span class="flow-text">URL: /registerClient</span>
+                                </div>
+                                <div class="col s6">
+                                    <h5>Registrar Cliente nuevo</h5>
+                                </div>
+                            </div>
+                            <div class="collapsible-body">
+                                <table class="striped">
+                                    <tr>
+                                        <th>Parametros requeridos</th>
+                                        <th>Parametros de datos</th>
+                                        <th>Respuesta Correcta</th>
+                                        <th>Respuesta Incorrecta</th>
+                                        <th>Ejemplo</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Token de login(headers)</td>
+                                        <td>name,phone,address,email,photo,sex</td>
+                                        <td>
+                                            Exito: true <br>
+                                            Respuesta: Campos Actualizados
+                                        </td>
+                                        <td>
+                                            Exito: false <br>
+                                            Respuesta: Error al actualizar datos
+                                        </td>
+                                        <td>
+                                            http://localhost:8080/api/registerClient
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </li>
+                        <li>
+                                <div class="collapsible-header">
+                                    <div class="col s1">
+                                            <button class="btn waves-effect waves-light">GET</button>
+                                        </div>
+                                    <div class="col s3" style="margin-left:20px;margin-top:10px;">
+                                        <span class="flow-text">URL: /getTrans/:client</span>
+                                    </div>
+                                    <div class="col s6">
+                                        <h5>Obtener movimientos de cliente</h5>
+                                    </div>
+                                </div>
+                                <div class="collapsible-body">
+                                    <table class="striped">
+                                        <tr>
+                                            <th>Parametros requeridos</th>
+                                            <th>Parametros de datos</th>
+                                            <th>Respuesta Correcta</th>
+                                            <th>Respuesta Incorrecta</th>
+                                            <th>Ejemplo</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Token de login(headers) <br> 
+                                                id cliente(parametros)</td>
+                                            <td>none</td>
+                                            <td>
+                                                Exito: true <br>
+                                                Respuesta: Movimientos de cliente
+                                            </td>
+                                            <td>
+                                                Exito: false <br>
+                                                Respuesta: Error
+                                            </td>
+                                            <td>
+                                                http://localhost:8080/api/getTrans/59f20aa5f72a2122d9e49f11
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </li>
+                            <li>
+                                    <div class="collapsible-header">
+                                        <div class="col s1">
+                                                <button class="btn waves-effect waves-light">GET</button>
+                                            </div>
+                                        <div class="col s3" style="margin-left:20px;margin-top:10px;">
+                                            <span class="flow-text">URL: /getTransNot/:client</span>
+                                        </div>
+                                        <div class="col s6">
+                                            <h5>Obtener movimientos no finalizados de cliente</h5>
+                                        </div>
+                                    </div>
+                                    <div class="collapsible-body">
+                                        <table class="striped">
+                                            <tr>
+                                                <th>Parametros requeridos</th>
+                                                <th>Parametros de datos</th>
+                                                <th>Respuesta Correcta</th>
+                                                <th>Respuesta Incorrecta</th>
+                                                <th>Ejemplo</th>
+                                            </tr>
+                                            <tr>
+                                                <td>Token de login(headers) <br> 
+                                                    id cliente(parametros)</td>
+                                                <td>none</td>
+                                                <td>
+                                                    Exito: true <br>
+                                                    Respuesta: Movimientos de cliente
+                                                </td>
+                                                <td>
+                                                    Exito: false <br>
+                                                    Respuesta: Error
+                                                </td>
+                                                <td>
+                                                    http://localhost:8080/api/getTransNot/59f20aa5f72a2122d9e49f11
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </li>
+                                <li>
+                                        <div class="collapsible-header">
+                                            <div class="col s1">
+                                                    <button class="btn waves-effect waves-light">GET</button>
+                                                </div>
+                                            <div class="col s3" style="margin-left:20px;margin-top:10px;">
+                                                <span class="flow-text">URL: /getClients</span>
+                                            </div>
+                                            <div class="col s6">
+                                                <h5>Obtener clientes de usuario</h5>
+                                            </div>
+                                        </div>
+                                        <div class="collapsible-body">
+                                            <table class="striped">
+                                                <tr>
+                                                    <th>Parametros requeridos</th>
+                                                    <th>Parametros de datos</th>
+                                                    <th>Respuesta Correcta</th>
+                                                    <th>Respuesta Incorrecta</th>
+                                                    <th>Ejemplo</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>Token de login(headers)</td>
+                                                    <td>none</td>
+                                                    <td>
+                                                        Exito: true <br>
+                                                        Respuesta: Clientes de usuario
+                                                    </td>
+                                                    <td>
+                                                        Exito: false <br>
+                                                        Respuesta: Error
+                                                    </td>
+                                                    <td>
+                                                        http://localhost:8080/api/getClients
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </li>
+                                <li>
+                                <div class="collapsible-header">
+                                    <div class="col s1">
+                                            <button class="btn waves-effect waves-light">GET</button>
+                                        </div>
+                                    <div class="col s3" style="margin-left:20px;margin-top:10px;">
+                                        <span class="flow-text">URL: /getRecord/:client</span>
+                                    </div>
+                                    <div class="col s6">
+                                        <h5>Obtener historial de cliente</h5>
+                                    </div>
+                                </div>
+                                <div class="collapsible-body">
+                                    <table class="striped">
+                                        <tr>
+                                            <th>Parametros requeridos</th>
+                                            <th>Parametros de datos</th>
+                                            <th>Respuesta Correcta</th>
+                                            <th>Respuesta Incorrecta</th>
+                                            <th>Ejemplo</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Token de login(headers) <br> 
+                                                id cliente(parametros)</td>
+                                            <td>none</td>
+                                            <td>
+                                                Exito: true <br>
+                                                Respuesta: Historial de cliente
+                                            </td>
+                                            <td>
+                                                Exito: false <br>
+                                                Respuesta: Error
+                                            </td>
+                                            <td>
+                                                http://localhost:8080/api/getRecord/59f20aa5f72a2122d9e49f11
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </li>
+                            <li>
+                                    <div class="collapsible-header">
+                                        <div class="col s1">
+                                                <button class="btn red lighten-1 waves-effect waves-red">PUT</button>
+                                            </div>
+                                        <div class="col s3" style="margin-left:20px;margin-top:10px;">
+                                            <span class="flow-text">URL: /registerTrans</span>
+                                        </div>
+                                        <div class="col s6">
+                                            <h5>Registrar movimiento de cliente</h5>
+                                        </div>
+                                    </div>
+                                    <div class="collapsible-body">
+                                        <table class="striped">
+                                            <tr>
+                                                <th>Parametros requeridos</th>
+                                                <th>Parametros de datos</th>
+                                                <th>Respuesta Correcta</th>
+                                                <th>Respuesta Incorrecta</th>
+                                                <th>Ejemplo</th>
+                                            </tr>
+                                            <tr>
+                                                <td>Token de login(headers)
+                                                    </td>
+                                                <td>client <br>
+                                                type <br>
+                                                finish <br>
+                                                totalCost <br>
+                                                finishDate <br>
+                                                key <br>
+                                                size <br>
+                                                color <br>
+                                                price <br>
+                                                quantity <br>
+                                                name</td>
+                                                <td>
+                                                    Exito: true <br>
+                                                    Respuesta: Pedido Guardado
+                                                </td>
+                                                <td>
+                                                    Exito: false <br>
+                                                    Respuesta: Error
+                                                </td>
+                                                <td>
+                                                    http://localhost:8080/api/registerTrans
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </li>
+                                <li>
+                                        <div class="collapsible-header">
+                                            <div class="col s1">
+                                                    <button class="btn orange lighten-1 waves-effect waves-orange">POST</button>
+                                                </div>
+                                            <div class="col s3" style="margin-left:20px;margin-top:10px;">
+                                                <span class="flow-text">URL: /record/:client</span>
+                                            </div>
+                                            <div class="col s6">
+                                                <h5>Registrar historial de cliente</h5>
+                                            </div>
+                                        </div>
+                                        <div class="collapsible-body">
+                                            <table class="striped">
+                                                <tr>
+                                                    <th>Parametros requeridos</th>
+                                                    <th>Parametros de datos</th>
+                                                    <th>Respuesta Correcta</th>
+                                                    <th>Respuesta Incorrecta</th>
+                                                    <th>Ejemplo</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>Token de login(headers) <br> 
+                                                        id cliente(parametros)</td>
+                                                    <td>
+                                                        client <br>
+                                                        typeTransaction <br>
+                                                        amount <br>
+                                                    </td>
+                                                    <td>
+                                                        Exito: true <br>
+                                                        Respuesta: Registro Guardado
+                                                    </td>
+                                                    <td>
+                                                        Exito: false <br>
+                                                        Respuesta: Error
+                                                    </td>
+                                                    <td>
+                                                        http://localhost:8080/api/record/59f20aa5f72a2122d9e49f11
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </li>
+                                    <li>
+                                            <div class="collapsible-header">
+                                                <div class="col s1">
+                                                        <button class="btn red lighten-1 waves-effect waves-red">PUT</button>
+                                                    </div>
+                                                <div class="col s3" style="margin-left:20px;margin-top:10px;">
+                                                    <span class="flow-text" style="font-size:20px">URL: /registerPayment/:client</span>
+                                                </div>
+                                                <div class="col s6">
+                                                    <h5>Registrar abono de cliente</h5>
+                                                </div>
+                                            </div>
+                                            <div class="collapsible-body">
+                                                <table class="striped">
+                                                    <tr>
+                                                        <th>Parametros requeridos</th>
+                                                        <th>Parametros de datos</th>
+                                                        <th>Respuesta Correcta</th>
+                                                        <th>Respuesta Incorrecta</th>
+                                                        <th>Ejemplo</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Token de login(headers) <br> 
+                                                            id cliente(parametros)</td>
+                                                        <td>payment <br>
+                                                            paymentDate</td>
+                                                        <td>
+                                                            Exito: true <br>
+                                                            Respuesta: Abono registrado
+                                                        </td>
+                                                        <td>
+                                                            Exito: false <br>
+                                                            Respuesta: Error
+                                                        </td>
+                                                        <td>
+                                                            http://localhost:8080/api/registerPayment/59f20aa5f72a2122d9e49f11
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </li>
+                                        <li>
+                                                <div class="collapsible-header">
+                                                    <div class="col s1">
+                                                            <button class="btn red lighten-1 waves-effect waves-red">PUT</button>                                                            
+                                                        </div>
+                                                    <div class="col s3" style="margin-left:20px;margin-top:10px;">
+                                                        <span class="flow-text" style="font-size:16px;">URL: /registerTrans/addProducts/:trans</span>
+                                                    </div>
+                                                    <div class="col s6">
+                                                        <h5>Añadir Productos a pedido</h5>
+                                                    </div>
+                                                </div>
+                                                <div class="collapsible-body">
+                                                    <table class="striped">
+                                                        <tr>
+                                                            <th>Parametros requeridos</th>
+                                                            <th>Parametros de datos</th>
+                                                            <th>Respuesta Correcta</th>
+                                                            <th>Respuesta Incorrecta</th>
+                                                            <th>Ejemplo</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Token de login(headers) <br> 
+                                                                id transaccion(parametros)</td>
+                                                            <td>key <br>
+                                                                quantity <br>
+                                                                name <br>
+                                                                size <br>
+                                                                color <br>
+                                                                price</td>
+                                                            <td>
+                                                                Exito: true <br>
+                                                                Respuesta: Producto añadido
+                                                            </td>
+                                                            <td>
+                                                                Exito: false <br>
+                                                                Respuesta: Error
+                                                            </td>
+                                                            <td>
+                                                                http://localhost:8080/api/registerTrans/addProducts/59f20aa5f72a2122d9e49f11
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                            </li>
+            </ul>
+    </div>
+                
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js">
+        $(document).ready(function(){
+            $('.collapsible').collapsible();
+        });
+    </script>
+</body>
+</html>
+<!-- 
+/register
+/login
+/getProfile
+/getTrans/:client
+/getTransNot/:client
+/getClients
+/getRecord/:client
+/registerTrans
+/record/:client
+/registerClient
+/registerPayment/:client
+/registerTrans/addProducts/:trans -->

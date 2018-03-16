@@ -1,5 +1,5 @@
 const MOONGOSE = require('mongoose');
-const SCHEMA = MOONGOSE.Schema;
+const Schema = MOONGOSE.Schema;
 
 const userSchema = new Schema({
     username: String,
