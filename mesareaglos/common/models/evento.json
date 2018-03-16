@@ -1,0 +1,38 @@
+{
+  "name": "evento",
+  "plural": "eventos",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "tipo": {
+      "type": "number",
+      "required": true
+    },
+    "regalos": {
+      "type": [
+        "object"
+      ],
+      "required": true
+    },
+    "invitados": {
+      "type": [
+        "object",
+        {
+          "properties" :{
+            "nombre": "string",
+            "email": "string"
+          }
+        }
+        
+      ],
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
